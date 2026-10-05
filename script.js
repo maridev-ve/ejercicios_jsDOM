@@ -153,7 +153,7 @@ boton5.addEventListener("click", () => {
 })
 
 
-//EJERCICIO 1 Añadir dos elementos `<li>` a un `<ul>` (Desde JS), y unirlos al DOM de tu página HTML
+//EJERCICIO DOM (CREAR LISTA DE ELEMENTOS) Añadir dos elementos `<li>` a un `<ul>` (Desde JS), y unirlos al DOM de tu página HTML
 
 // 1. Busco dónde lo voy a meter (ya existe en el HTML)
 let div2 = document.getElementById("div2")
@@ -184,3 +184,21 @@ li2.setAttributeNode(class2)//AGREGAMOS EL ATRIBUTO
 ul.appendChild(li1)
 ul.appendChild(li2)
 div2.appendChild(ul)
+
+/*Ejercicio 1 bis:
+Nota (ejercicio avanzado): pensar el caso de añadir datos de un array de tareas de tamaño indeterminado (los datos ya están dentro del array)
+["comprar","barrer","alimentar gato","colada"]*/
+
+const array = ["comprar", "barrer", "alimentar gato", "colada", "hola"]
+const div3 = document.getElementById("div3");
+const ulArray = document.createElement("ul");
+
+for (let i = 0; i < array.length; i++){
+    //array[i] es la tarea de esta vuelta
+    const li = document.createElement("li")
+    const textLi = document.createTextNode (array[i]);
+    li.appendChild(textLi);
+    ulArray.appendChild(li)
+}
+
+div3.appendChild(ulArray);
