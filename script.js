@@ -190,7 +190,7 @@ Nota (ejercicio avanzado): pensar el caso de añadir datos de un array de tareas
 ["comprar","barrer","alimentar gato","colada"]*/
 
 const array = ["comprar", "barrer", "alimentar gato", "colada", "hola"]
-const div3 = document.getElementById("div3");
+const div3 = document.getElementById("div3");//Donde se agrega
 const ulArray = document.createElement("ul");
 
 for (let i = 0; i < array.length; i++){
