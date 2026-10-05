@@ -1,3 +1,4 @@
+
 console.log("holaaaaaaaaaa");
 
 console.log(document.getElementById("titulo"))
@@ -101,9 +102,9 @@ for (let i = 0; i < listaP.length; i++) {
 * Añade un listener que, al clickar, haga `preventDefault()` y muestre un mensaje “¡No puedes salir!”.*/
 
 const enlace = document.querySelector(".section");
-enlace.innerHTML += "<a href='https://google.com'>Ir a Google</a>";
+const itemEnlace = document.getElementById("enlace");
 
-enlace.addEventListener("click", (evento) => {
+itemEnlace.addEventListener("click", (evento) => {
     evento.preventDefault();
     alert("¡No puedes salir!");
 });
@@ -144,10 +145,36 @@ let boton5 = document.getElementById("buttonList");
 let input = document.getElementById("input");
 let lista = document.getElementById("listado");
 
-console.log(boton5).value;
 
 boton5.addEventListener("click", () => {
     const li = document.createElement("li");
     li.textContent = input.value;
     lista.appendChild(li);
 })
+
+
+//EJERCICIO 1 Añadir dos elementos `<li>` a un `<ul>` (Desde JS), y unirlos al DOM de tu página HTML
+
+// 1. Busco dónde lo voy a meter (ya existe en el HTML)
+let div2 = document.getElementById("div2")
+
+// 2. Creo el ul y los dos li
+const ul = document.createElement("ul");
+
+const li1 = document.createElement("li");
+li1.textContent = "Element 1"
+
+const li2 = document.createElement("li");
+li2.textContent = "Element 2"
+
+const li3 = document.createElement("li");
+li3.textContent = "Element 3"
+
+//METO LOS LI DENTRO DEL UL
+ul.appendChild(li1)
+ul.appendChild(li2)
+ul.appendChild(li3)
+
+//EL "UL" AL DOM
+div2.appendChild(ul)
+
