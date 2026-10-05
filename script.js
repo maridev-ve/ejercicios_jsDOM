@@ -158,23 +158,29 @@ boton5.addEventListener("click", () => {
 // 1. Busco dónde lo voy a meter (ya existe en el HTML)
 let div2 = document.getElementById("div2")
 
-// 2. Creo el ul y los dos li
-const ul = document.createElement("ul");
+const ul = document.createElement("ul");// 2. Creo el ul y los dos li
 
+//CREAMOS PRIMER LI
 const li1 = document.createElement("li");
-li1.textContent = "Element 1"
+const text1 = document.createTextNode("hola, soy nuevo");//CREAMOS TEXTO DE NODO
+li1.appendChild(text1)//METEMOS EL TEXTO EN EL LI
 
+//BASADO EN LO QUE PIDE EL EJERCICIO, CREAR ALGUN ATRIBUTO
+const class1 = document.createAttribute("class"); //creamos el atributo class
+class1.value = "item"; //Nombre de la clase
+li1.setAttributeNode(class1)//AGREGAMOS EL ATRIBUTO
+
+//CREAMOS SEUNDO LI
 const li2 = document.createElement("li");
-li2.textContent = "Element 2"
+const text2 = document.createTextNode("hola, soy EL SEGUNDO LI");//CREAMOS TEXTO DE NODO
+li2.appendChild(text2)//METEMOS EL TEXTO EN EL LI
 
-const li3 = document.createElement("li");
-li3.textContent = "Element 3"
+//BASADO EN LO QUE PIDE EL EJERCICIO, CREAR ALGUN ATRIBUTO
+const class2 = document.createAttribute("class"); //creamos el atributo class
+class2.value = "item"; //Nombre de la clase
+li2.setAttributeNode(class2)//AGREGAMOS EL ATRIBUTO
 
-//METO LOS LI DENTRO DEL UL
+//METEMOS LOS LI EN EL UL Y EL UL EN EL DOM
 ul.appendChild(li1)
 ul.appendChild(li2)
-ul.appendChild(li3)
-
-//EL "UL" AL DOM
 div2.appendChild(ul)
-
